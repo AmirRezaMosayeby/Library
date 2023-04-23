@@ -1,5 +1,11 @@
 import { booksGraph, book, author, authorsGraph } from "./query.js";
-import { addBook, deleteBook, editBook, addAuthor } from "./mutation.js";
+import {
+  addBook,
+  deleteBook,
+  editBook,
+  addAuthor,
+  EditAuthor,
+} from "./mutation.js";
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
 
 const RootQuery = new GraphQLObjectType({
@@ -21,6 +27,7 @@ const MutationQuery = new GraphQLObjectType({
     deleteBook,
     addBook,
     addAuthor,
+    EditAuthor,
   },
 });
 

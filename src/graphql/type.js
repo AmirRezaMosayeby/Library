@@ -34,9 +34,17 @@ export const BookType = new GraphQLObjectType({
 export const BookUpdateType = new GraphQLInputObjectType({
   name: "UpadateBooks",
   fields: {
-    // id: { type: GraphQLID },
-    pages: { type: GraphQLInt },
     name: { type: GraphQLString },
+    page: { type: GraphQLInt },
+    author: { type: GraphQLID },
+  },
+});
+
+export const AuthorUpdateType = new GraphQLInputObjectType({
+  name: "UpdatesAuthors",
+  fields: {
+    name: { type: GraphQLString },
+    age: { type: GraphQLInt },
   },
 });
 
